@@ -1,0 +1,7 @@
+export const ADD_POSTS = 'ADD_POSTS'
+export const ADD_POSTS_ASYNC = 'ADD_POSTS_ASYNC'
+export const CLICK_LIKE = 'CLICK_LIKE'
+export const TEST = 'TEST'
+export const REMOVE_TASK = 'REMOVE_TASK'
+export const COMPLETE_TASK = 'COMPLETE_TASK'
+export const CHANGE_FILTER = 'CHANGE_FILTER'
