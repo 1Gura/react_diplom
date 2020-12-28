@@ -83,18 +83,25 @@ class PostContainer extends Component{
         if(photo.liked_by_user === false) {
             console.log('like')
             this.state.unsplashBody.photos.likePhoto(id)
-                .then(toJson)
-                .then(json => {
-                    this.updatePosts(id, json);
+                .then(() => {
+                    this.state.unsplashBody.photos.getPhoto(id)
+                        .then(toJson)
+                        .then((json)=> {
+                            this.updatePosts(id, json);
+                        })
+
                 })
 
         }
         else {
             console.log('unlike');
             this.state.unsplashBody.photos.unlikePhoto(id)
-                .then(toJson)
-                .then(json => {
-                    this.updatePosts(id,json)
+                .then(() => {
+                    this.state.unsplashBody.photos.getPhoto(id)
+                        .then(toJson)
+                        .then((json)=> {
+                            this.updatePosts(id, json);
+                        })
                 })
         }
     }
